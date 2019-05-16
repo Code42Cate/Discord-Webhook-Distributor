@@ -1,0 +1,9 @@
+{
+    "token": "Discord Bot Token",
+    "channelID": "Channel ID of your master channel",
+    "webhooks": [
+        "Your discord webhook URL should be here!",
+        "Maybe another one?",
+        "And another one?"
+    ]
+}
