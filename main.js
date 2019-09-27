@@ -13,19 +13,17 @@ client.on('message', (msg) => {
   if (msg.channel.id === config.channelID) {
     config.webhooks.forEach((webhook) => {
       const payload = {
-        // Read the discord embed documentation to see what else you can do with embeds!
-        // https://discordapp.com/developers/docs/resources/channel#embed-limits
+        headers: { 'Content-Type': 'application/json' },
         url: webhook,
         method: 'POST',
-        message: {
+        json: {
           embeds: [{
             title: 'Title?',
-            color: 1490505,
+            color: 0x16BE49,
             footer: {
               text: 'Footer?',
             },
             description: msg.content,
-            // You can add up to 25 Fields!
             fields: [
               {
                 name: 'Time',
